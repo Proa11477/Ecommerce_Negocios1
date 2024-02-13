@@ -7,36 +7,42 @@
     <link rel="stylesheet" href="assets/css/Style.css">
 
 </head>
+
 <body>
-    <form id="regForm">
-        <label for="Producto">Nombre del producto:</label>
-        <input type="text" id="producto" name="producto" required>
 
-        <label for="descripcion">Descripcion del producto:</label>
-        <input type="text" id="descripcion" name="descripcion" required>
-        
-        <label for="categoria">Categoria:</label>
-        <input type="text" id="categoria" name="categoria" required>
+    <div class="div">
+        <form id="regForm">
+            <label for="Producto">Nombre del producto:</label>
+            <input type="text" id="producto" name="producto" required>
+    
+            <label for="descripcion">Descripcion del producto:</label>
+            <input type="text" id="descripcion" name="descripcion" required>
+            
+            <label for="categoria">Categoria:</label>
+            <input type="text" id="categoria" name="categoria" required>
+    
+            <label for="imagen">Link de imagen:</label>
+            <input type="text" id="imagen" name="imagen" required>
+            
+            <input type="submit" value="Register">
+        </form>
+    </div>
 
-        <label for="imagen">Link de imagen:</label>
-        <input type="text" id="imagen" name="imagen" required>
-        
-        <input type="submit" value="Register">
-    </form>
-
-    <div id="tablaProductos">
-        <h2>Lista de Productos Registrados</h2>
-        <table border="1">
-            <thead>
-                <tr>
-                    <th>Nombre</th>
-                    <th>Descripción</th>
-                    <th>Categoría</th>
-                    <th>Imagen</th>
-                </tr>
-            </thead>
-            <tbody id="productosBody"></tbody>
-        </table>
+    <div class="div">
+        <div id="tablaProductos">
+            <h2>Lista de Productos Registrados</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Categoría</th>
+                        <th>Imagen</th>
+                    </tr>
+                </thead>
+                <tbody id="productosBody"></tbody>
+            </table>
+        </div>
     </div>
 
     <script src="assets/js/datos.js"></script>
