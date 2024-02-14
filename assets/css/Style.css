@@ -4,13 +4,13 @@ body {
     color: white;
     margin: 0px;
 }
-
+/*Formulario*/
 form {
     width: 25%;
     margin: auto;
     margin-top: 100px;
     padding: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid #e26969;
     box-shadow: 10px 10px 10px rgba(0,0,0,0.1);
 }
 
@@ -19,15 +19,19 @@ label {
     margin-top: 20px;
 }
 
-input[type="text"], input[type="email"], input[type="password"] {
+/*Campos*/
+input[type="text"] {
+    color: rgb(40, 169, 169);
     width: 95%;
     padding: 10px;
     margin-top: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid #f64949;
     border-radius: 3px;
     box-sizing: border-box;
+    background: transparent;
 }
 
+/*Boton*/
 input[type="submit"] {
     margin-top: 25px;
     width: 100%;
@@ -39,31 +43,33 @@ input[type="submit"] {
     cursor: pointer;
 }
 
+
 input[type="submit"]:hover {
     background-color: darkorchid;
 }
 
-div {
-    width: 50%;
-    float: left;
-}
 
+
+/*tabla*/
 table {
     border: black 1px solid;
 }
 
+/*Encabezado*/
 header{
     background-color: darkorchid;
     height: 50px;
     
 }
-
+ 
+/*Parrafo del header*/
 header p{
     margin-left: 35px;
     font-size: 30px;
     margin-top: 10px;
 }
 
+/*Div en header*/
 header div{
     background-color: rgba(198, 43, 226, 0.722);
     height: 50px;
@@ -71,12 +77,34 @@ header div{
     width: 30%;
 }
 
+/*Principal*/
 main{
     background-color: rgba(0, 0, 0, 0.636);        
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
+/*parrafo en encabezado*/
 main p{
     width: 35%;
     font-size: 30px;
     margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+article {
+    flex: 2;
+    padding-right: 20px;
+}
+
+aside {
+    margin-top: 0px;
+    flex: 2;
+    padding: 10px;
+    margin-bottom: 20px;
 }
