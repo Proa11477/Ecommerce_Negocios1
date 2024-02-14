@@ -12,6 +12,8 @@ form {
     padding: 20px;
     border: 1px solid #e26969;
     box-shadow: 10px 10px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 2px #e26969, 0 0 5px #e26969, 0 0 5px #e26969, 0 0 10px #e26969;
+    padding: 20px; /* Añadido para dar espacio al texto dentro del cuadro */
 }
 
 label {
@@ -52,9 +54,17 @@ input[type="submit"]:hover {
 
 /*tabla*/
 table {
-    border: black 1px solid;
     margin-right: 10px;
-    width: 60%;
+    width: 100%;
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 2px #e26969, 0 0 5px #e26969, 0 0 5px #e26969, 0 0 10px #e26969;
+    padding: 20px;
+    
+}
+
+table td{
+    border: 2px solid #f64949;
+    text-align: center;
 }
 
 /*Encabezado*/
@@ -114,4 +124,10 @@ aside:nth-child(1) {
 aside:nth-child(2) {
     width: 30%; /* Ajusta el ancho del segundo aside (tabla) */
     margin-left: 10px;
+}
+
+table img {
+    width:3cm;
+    height: 3cm;
+    object-fit: cover; /* Redimensiona y recorta la imagen manteniendo su relación de aspecto */
 }
