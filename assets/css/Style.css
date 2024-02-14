@@ -6,7 +6,7 @@ body {
 }
 /*Formulario*/
 form {
-    width: 25%;
+    width: 40%;
     margin: auto;
     margin-top: 100px;
     padding: 20px;
@@ -53,6 +53,8 @@ input[type="submit"]:hover {
 /*tabla*/
 table {
     border: black 1px solid;
+    margin-right: 10px;
+    width: 60%;
 }
 
 /*Encabezado*/
@@ -78,16 +80,13 @@ header div{
 }
 
 /*Principal*/
-main{
-    background-color: rgba(0, 0, 0, 0.636);        
+main {
+    background-color: rgba(0, 0, 0, 0.636);
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start; /* Alinea los elementos hacia arriba */
     justify-content: space-between;
-    padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-}
+} 
 
 /*parrafo en encabezado*/
 main p{
@@ -97,14 +96,22 @@ main p{
     margin-bottom: 0px;
 }
 
-article {
-    flex: 2;
-    padding-right: 20px;
+main {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-aside {
-    margin-top: 0px;
-    flex: 2;
-    padding: 10px;
-    margin-bottom: 20px;
+article {
+    width: 100%;
+    display: flex;
+}
+aside:nth-child(1) {
+    width: 65%; /* Ajusta el ancho del primer aside (formulario) */
+    margin-left: 0px;
+    margin-right: 20px;
+}
+aside:nth-child(2) {
+    width: 30%; /* Ajusta el ancho del segundo aside (tabla) */
+    margin-left: 10px;
 }

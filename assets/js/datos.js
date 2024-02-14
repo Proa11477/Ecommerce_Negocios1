@@ -1,13 +1,6 @@
 // Array para almacenar los datos de productos
 var productos = [];
 
-// Objeto JSON con los nombres de los productos y las URLs de imagen correspondientes
-var imagenesProductos = {
-    'Hotwheels': 'img/carrito.jpg',
-    'ControlXbox': 'img/control.jpg',
-    'TERRENEITOR': 'img/terreneitor.jpg'
-};
-
 // Función para manejar el evento de envío del formulario
 document.getElementById('regForm').addEventListener('submit', function (event) {
     event.preventDefault(); // Evitar el envío del formulario
@@ -16,8 +9,7 @@ document.getElementById('regForm').addEventListener('submit', function (event) {
     var nombreProducto = document.getElementById('producto').value;
     var descripcionProducto = document.getElementById('descripcion').value;
     var categoriaProducto = document.getElementById('categoria').value;
-    var seleccionProducto = document.getElementById('seleccionProducto').value; // Nuevo campo para la selección de producto
-    var imagenProducto = imagenesProductos[seleccionProducto]; // Obtener la URL de la imagen basada en la selección del producto
+    var imagenProducto = document.getElementById('imagen').value;
 
     // Crear un objeto con los datos del producto
     var nuevoProducto = {
@@ -34,7 +26,7 @@ document.getElementById('regForm').addEventListener('submit', function (event) {
     document.getElementById('producto').value = '';
     document.getElementById('descripcion').value = '';
     document.getElementById('categoria').value = '';
-    document.getElementById('seleccionProducto').selectedIndex = 0; // Restablecer la selección de producto
+    document.getElementById('imagen').value = '';
 
     // Actualizar la tabla de productos
     actualizarTablaProductos();
