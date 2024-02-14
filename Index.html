@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,37 +15,36 @@
         <form id="regForm">
             <label for="Producto">Nombre del producto:</label>
             <input type="text" id="producto" name="producto" required>
-    
+
             <label for="descripcion">Descripcion del producto:</label>
             <input type="text" id="descripcion" name="descripcion" required>
-            
+
             <label for="categoria">Categoria:</label>
             <input type="text" id="categoria" name="categoria" required>
-    
+
             <label for="imagen">Link de imagen:</label>
             <input type="text" id="imagen" name="imagen" required>
-            
+
             <input type="submit" value="Register">
         </form>
     </div>
 
-    <div class="div">
-        <div id="tablaProductos">
-            <h2>Lista de Productos Registrados</h2>
-            <table border="1">
-                <thead>
-                    <tr>
-                        <th>Nombre</th>
-                        <th>Descripción</th>
-                        <th>Categoría</th>
-                        <th>Imagen</th>
-                    </tr>
-                </thead>
-                <tbody id="productosBody"></tbody>
-            </table>
-        </div>
+    <div id="tablaProductos">
+        <h2>Lista de Productos Registrados</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                    <th>Categoría</th>
+                    <th>Imagen</th>
+                </tr>
+            </thead>
+            <tbody id="productosBody"></tbody>
+        </table>
     </div>
 
     <script src="assets/js/datos.js"></script>
 </body>
+
 </html>
