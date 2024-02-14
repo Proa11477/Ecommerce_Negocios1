@@ -13,25 +13,26 @@
 
     <div class="div">
         <form id="regForm">
-            <label for="Producto">Nombre del producto:</label>
-            <input type="text" id="producto" name="producto" required>
-
-            <label for="descripcion">Descripcion del producto:</label>
-            <input type="text" id="descripcion" name="descripcion" required>
-
-            <label for="categoria">Categoria:</label>
-            <input type="text" id="categoria" name="categoria" required>
-
-            <label for="imagen">Link de imagen:</label>
-            <input type="text" id="imagen" name="imagen" required>
-
+            <label for="producto">Nombre del Producto:</label>
+            <input type="text" id="producto" name="producto" required><br><br>
+        
+            <label for="descripcion">Descripción:</label>
+            <input type="text" id="descripcion" name="descripcion"><br><br>
+        
+            <label for="categoria">Categoría:</label>
+            <input type="text" id="categoria" name="categoria" required><br><br>
+        
+            <label for="seleccionProducto">Selecciona un producto:</label>
+            <select id="seleccionProducto">
+                <option value="" disabled selected>Seleccione un producto</option>
+                <option value="Hotwheels">Hotwheels</option>
+                <option value="ControlXbox">ControlXbox</option>
+                <option value="TERRENEITOR">TERRENEITOR</option>
+            </select><br><br>
             <input type="submit" value="Register">
         </form>
-    </div>
-
-    <div id="tablaProductos">
-        <h2>Lista de Productos Registrados</h2>
-        <table class="table">
+        
+        <table>
             <thead>
                 <tr>
                     <th>Nombre</th>
@@ -42,6 +43,7 @@
             </thead>
             <tbody id="productosBody"></tbody>
         </table>
+        
     </div>
 
     <script src="assets/js/datos.js"></script>
