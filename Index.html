@@ -11,26 +11,54 @@
 
 <body>
 
+        <header>
+            <div>
+                <p><b>CRUD</b>_productos</p>
+            </div>            
+        </header>
+
+        <main>
+            <article>
+                <section>
+                    <p>Agregar un Producto</p>                
+                </section>
+
+                <aside>
+                    <form id="regForm">
+                        <label for="producto">Nombre del Producto:</label>
+                        <input type="text" id="producto" name="producto" required><br><br>
+                    
+                        <label for="descripcion">Descripción:</label>
+                        <input type="text" id="descripcion" name="descripcion"><br><br>
+                    
+                        <label for="categoria">Categoría:</label>
+                        <input type="text" id="categoria" name="categoria" required><br><br>
+                    
+                        <label for="seleccionProducto">Selecciona un producto:</label>
+                        <select id="seleccionProducto">
+                            <option value="" disabled selected>Seleccione un producto</option>
+                            <option value="Hotwheels">Hotwheels</option>
+                            <option value="ControlXbox">ControlXbox</option>
+                            <option value="TERRENEITOR">TERRENEITOR</option>
+                        </select><br><br>
+                        <input type="submit" value="Register">
+                    </form>
+                    
+                </aside>
+                
+            </article>
+
+
+        </main>
+
+
+
+
+
+
+
     <div class="div">
-        <form id="regForm">
-            <label for="producto">Nombre del Producto:</label>
-            <input type="text" id="producto" name="producto" required><br><br>
         
-            <label for="descripcion">Descripción:</label>
-            <input type="text" id="descripcion" name="descripcion"><br><br>
-        
-            <label for="categoria">Categoría:</label>
-            <input type="text" id="categoria" name="categoria" required><br><br>
-        
-            <label for="seleccionProducto">Selecciona un producto:</label>
-            <select id="seleccionProducto">
-                <option value="" disabled selected>Seleccione un producto</option>
-                <option value="Hotwheels">Hotwheels</option>
-                <option value="ControlXbox">ControlXbox</option>
-                <option value="TERRENEITOR">TERRENEITOR</option>
-            </select><br><br>
-            <input type="submit" value="Register">
-        </form>
         
         <table>
             <thead>

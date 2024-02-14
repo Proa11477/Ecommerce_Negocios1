@@ -1,9 +1,12 @@
 body {
     font-family: Arial, sans-serif;
+    background-color: rgb(30, 30, 30);
+    color: white;
+    margin: 0px;
 }
 
 form {
-    width: 50%;
+    width: 25%;
     margin: auto;
     margin-top: 100px;
     padding: 20px;
@@ -17,7 +20,7 @@ label {
 }
 
 input[type="text"], input[type="email"], input[type="password"] {
-    width: 100%;
+    width: 95%;
     padding: 10px;
     margin-top: 5px;
     border: 1px solid #ccc;
@@ -29,7 +32,7 @@ input[type="submit"] {
     margin-top: 25px;
     width: 100%;
     padding: 10px;
-    background-color: #4CAF50;
+    background-color: darkorchid;
     color: white;
     border: none;
     border-radius: 3px;
@@ -37,7 +40,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background-color: #45a049;
+    background-color: darkorchid;
 }
 
 div {
@@ -47,4 +50,33 @@ div {
 
 table {
     border: black 1px solid;
+}
+
+header{
+    background-color: darkorchid;
+    height: 50px;
+    
+}
+
+header p{
+    margin-left: 35px;
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+header div{
+    background-color: rgba(198, 43, 226, 0.722);
+    height: 50px;
+    margin-left: 35px;
+    width: 30%;
+}
+
+main{
+    background-color: rgba(0, 0, 0, 0.636);        
+}
+
+main p{
+    width: 35%;
+    font-size: 30px;
+    margin-top: 0px;
 }
