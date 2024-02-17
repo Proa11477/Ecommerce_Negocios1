@@ -38,14 +38,21 @@ function actualizarTablaProductos() {
     productosBody.innerHTML = ''; // Limpiar el contenido actual de la tabla
 
     // Recorrer el array de productos y agregar filas a la tabla
-    productos.forEach(function (producto) {
+    productos.forEach(function (producto, index) {
         var fila = document.createElement('tr');
         fila.innerHTML = `
             <td>${producto.nombre}</td>
             <td>${producto.descripcion}</td>
             <td>${producto.categoria}</td>
             <td><img src="${producto.imagen}" alt="Imagen del producto"></td>
+            <td><button class="btn-1" onclick="eliminarProducto(${index})"><img src="borrar.png" style="width: 25px; height: 25px;"></button></td>
         `;
         productosBody.appendChild(fila);
     });
+}
+
+// Función para eliminar un producto del array y actualizar la tabla
+function eliminarProducto(index) {
+    productos.splice(index, 1);
+    actualizarTablaProductos(); // Actualizar la tabla de productos
 }
