@@ -45,7 +45,10 @@ function actualizarTablaProductos() {
             <td>${producto.descripcion}</td>
             <td>${producto.categoria}</td>
             <td><img src="${producto.imagen}" alt="Imagen del producto"></td>
-            <td><button class="btn-1" onclick="eliminarProducto(${index})"><img src="borrar.png" style="width: 25px; height: 25px;"></button></td>
+            <td>
+                <button class="btn-1" onclick="eliminarProducto(${index})"><img src="borrar.png" style="width: 25px; height: 25px;"></button>
+                <button class="btn-1" ><img src="editar.png" style="width: 25px; height: 25px;"></button>
+            </td>
         `;
         productosBody.appendChild(fila);
     });
