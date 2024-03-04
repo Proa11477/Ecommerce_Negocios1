@@ -16,13 +16,14 @@ form {
     padding: 20px; /* Añadido para dar espacio al texto dentro del cuadro */
 }
 
+
 label {
     display: block;
     margin-top: 20px;
 }
 
 /*Campos*/
-input[type="text"] {
+input {
     color: rgb(40, 169, 169);
     width: 95%;
     padding: 10px;

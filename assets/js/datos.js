@@ -23,8 +23,10 @@
             productos.forEach(function (producto, index) {
 
                 //solo para debug y pruebas
+                console.log("producto:",producto.Id);
                 console.log("producto:",producto.nombre);
                 console.log("producto:",producto.descripcion);
+                console.log("producto:",producto.precio);
                 console.log("producto:",producto.categoria);
                 console.log("producto:",producto.imagen);
                 console.log("producto:",index);
@@ -32,8 +34,10 @@
                 //continua funcion normal con el recorrido y agregacion de filas
                 var fila = document.createElement('tr');
                 fila.innerHTML = `
+                    <td>${producto.Id}</td>
                     <td>${producto.nombre}</td>
                     <td>${producto.descripcion}</td>
+                    <td>${producto.precio}</td>
                     <td>${producto.categoria}</td>
                     <td><img src="${producto.imagen}" alt="Imagen del producto"></td>
                     <td>
@@ -56,8 +60,10 @@
         function editarProducto(index) {
             var producto = productos[index]; //toma el producto a editar
             // Llena el formulario con los datos del producto para que el usuario pueda modificarlos
+            document.getElementById('Id').value = producto.Id;
             document.getElementById('producto').value = producto.nombre;
             document.getElementById('descripcion').value = producto.descripcion;
+            document.getElementById('precio').value = producto.precio;
             document.getElementById('categoria').value = producto.categoria;
             document.getElementById('imagen').value = producto.imagen;
 
@@ -75,14 +81,18 @@
 
             //  Actualiza los datos del producto en el array con los valores del formulario
             if (index !== '') {
+                productos[index].Id = document.getElementById('Id').value;
                 productos[index].nombre = document.getElementById('producto').value;
                 productos[index].descripcion = document.getElementById('descripcion').value;
+                productos[index].precio = document.getElementById('precio').value;
                 productos[index].categoria = document.getElementById('categoria').value;
                 productos[index].imagen = document.getElementById('imagen').value;
 
                 // Limpia el formulario después de guardar los cambios
+                document.getElementById('Id').value = '';
                 document.getElementById('producto').value = '';
                 document.getElementById('descripcion').value = '';
+                document.getElementById('precio').value = '';
                 document.getElementById('categoria').value = '';
                 document.getElementById('imagen').value = '';
 
@@ -93,16 +103,20 @@
                 actualizarTablaProductos();
             } else {
                 // Si no se está editando un producto existente, agrega un nuevo producto
-                // Se obtienen los valores del formulario
+                // Se obtienen los valores del formulario   
+                var idProducto = document.getElementById('Id').value;
                 var nombreProducto = document.getElementById('producto').value;
                 var descripcionProducto = document.getElementById('descripcion').value;
+                var precioProducto = document.getElementById('precio').value;
                 var categoriaProducto = document.getElementById('categoria').value;
                 var imagenProducto = document.getElementById('imagen').value;
 
                 // Crear un objeto con los datos del producto
                 var nuevoProducto = {
+                    Id: idProducto,
                     nombre: nombreProducto,
                     descripcion: descripcionProducto,
+                    precio: precioProducto,
                     categoria: categoriaProducto,
                     imagen: imagenProducto
                 };
@@ -111,8 +125,10 @@
                 productos.push(nuevoProducto);
 
                 // Limpiar los campos del formulario
+                document.getElementById('Id').value = '';
                 document.getElementById('producto').value = '';
                 document.getElementById('descripcion').value = '';
+                document.getElementById('precio').value = '';
                 document.getElementById('categoria').value = '';
                 document.getElementById('imagen').value = '';
 
